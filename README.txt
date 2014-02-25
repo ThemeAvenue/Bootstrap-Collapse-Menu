@@ -1,6 +1,6 @@
 === Bootstrap Collapse Menu Widget ===
 
-Contributors: themeavenue, julien731 (this should be a list of wordpress.org userid's)
+Contributors: themeavenue, julien731
 Donate link: http://example.com/
 Tags: widget, bootstrap, collapse, menu, accordion
 Requires at least: 3.5
