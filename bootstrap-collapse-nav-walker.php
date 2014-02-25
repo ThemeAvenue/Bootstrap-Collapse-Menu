@@ -148,7 +148,7 @@ class Bootstrap_Collapse_Nav_Walker extends Walker_Nav_Menu {
 
 			$atts['href'] 		 = '#' . sanitize_title( $item->title );
 			$atts['data-toggle'] = 'collapse';
-			$atts['data-parent'] = '#menu-' . $args->menu;
+			$atts['data-parent'] = '#menu-' . wp_get_nav_menu_object( $args->menu )->slug;
 
 			$this->parent_id = sanitize_title( $item->title );
 
