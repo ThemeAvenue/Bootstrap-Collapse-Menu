@@ -146,9 +146,16 @@ class Bootstrap_Collapse_Nav_Walker extends Walker_Nav_Menu {
 
 		if( 0 == $depth && in_array( 'menu-item-has-children', $item->classes ) ) {
 
+			//wpml fix
+			$menu_slug = $args->menu;
+			if( ! is_string( $menu_slug ) ) {
+				$menu_slug = $args->menu->slug;
+			}
+
 			$atts['href'] 		 = '#' . sanitize_title( $item->title );
 			$atts['data-toggle'] = 'collapse';
-			$atts['data-parent'] = '#menu-' . wp_get_nav_menu_object( $args->menu )->slug;
+			//$atts['data-parent'] = '#menu-' . $args->menu;
+			$atts['data-parent'] = '#menu-' . $menu_slug;
 
 			$this->parent_id = sanitize_title( $item->title );
 
